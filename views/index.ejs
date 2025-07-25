@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Sorting Algorithm Visualizer</h1>
+    <h3>Kamran Hossain Topu</h3>
+
+    <div class="controls">
+        <div class="button-container">
+            <% algorithms.forEach(function(algorithm) { %>
+                <button onclick="selectAlgorithm('<%= algorithm.key %>')"><%= algorithm.name %></button>
+            <% }); %>
+        </div>
+        
+        <div class="speed-control">
+            <label for="speed">Speed:</label>
+            <input type="range" id="speed" min="10" max="500" value="100" oninput="changeSpeed(this.value)">
+        </div>
+        
+        <div class="size-control">
+            <label for="arraySize">Array Size:</label>
+            <input type="range" id="arraySize" min="5" max="50" value="15" onchange="initArray(this.value)">
+        </div>
+        
+        <button id="start-btn" onclick="startSorting()">Start Sorting</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="resetArray()">Reset Array</button>
+    </div>
+    
+    <div id="array-container"></div>
+
+    <div id="algorithm-info" class="algorithm-info" style="display: none;">
+        <h2 id="algorithm-name"></h2>
+        <p id="algorithm-description"></p>
+        <div class="complexity">
+            <div>
+                <h3>Time Complexity</h3>
+                <p>Best: <span id="time-best"></span></p>
+                <p>Average: <span id="time-average"></span></p>
+                <p>Worst: <span id="time-worst"></span></p>
+            </div>
+            <div>
+                <h3>Space Complexity</h3>
+                <p><span id="space-complexity"></span></p>
+            </div>
+            <div>
+                <h3>Performance</h3>
+                <p>Time taken: <span id="time-taken">0</span> ms</p>
+                <p>Comparisons: <span id="comparisons">0</span></p>
+                <p>Swaps: <span id="swaps">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#array-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 400px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.array-bar {
+    width: 100%;
+    margin: 0 1px;
+    display: inline-block;
+    background-color:steelblue;
+    transition: height 0.3s ease, background-color 0.3s ease;
+    border-radius: 3px 3px 0 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #15181a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    background-color: #1f2e3a;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.speed-control label {
+    font-weight: bold;
+}
+
+.size-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.size-control label {
+    font-weight: bold;
+}
+
+.algorithm-info {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.algorithm-info h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.complexity {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.complexity div {
+    text-align: center;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.complexity h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+    }
+    
+    .complexity {
+        flex-direction: column;
+    }
+    
+    .complexity div {
+        margin: 5px 0;
+    }
+}
